@@ -3,17 +3,15 @@ import Login from "../Components/Login/Login"
 import Dashboard from "../Components/Dashboard/Dashboard"
 import { type } from "os"
 
-interface routes{
+interface routes {
     to: string,
     path: string,
-    Component: Props
+    name: string,
+    Component: () => JSX.Element
 }
 
-interface Props { children: JSX.Element | JSX.Element[] }
 
-export const CustomRoutes = () : routes[] => {
-    return [
-        {to: "/login", path:"/login", Component: Login},
-        {to: "/dashboard", path:"/dashboard",  Component: Dashboard}
-    ]
-}
+export const routes: routes[] = [
+    { to: "/", path: "/", name:"login", Component: Login },
+    { to: "/dashboard", path: "/dashboard", name:"dashboard", Component: Dashboard }
+]

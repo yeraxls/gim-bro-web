@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 interface userModel{
@@ -9,13 +10,15 @@ interface userModel{
 const initialState : userModel = {email:"", password:""}
 
 const useLogin = () => {
+    const navigate = useNavigate();
     const [user, setUser] = useState(initialState);
-
     const login = () => {
         //llamada al login y redirect al dashboard
+        console.log(user)
+        navigate("/dashboard")
     }
     
-    return {}
+    return {user, setUser, login}
 }
 
 export default useLogin

@@ -1,22 +1,14 @@
-
+import "./styles/custom.css"
 const Login = () => {
   return (
     <div>
-      <form>
-        <div className="form-group">
-          <label>Email address</label>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-          <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div className="form-group">
-          <label>Password</label>
-          <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-        </div>
-        <div className="form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-          <label className="form-check-label">Check me out</label>
-        </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+      <form className="form" >
+        <img src="https://ih1.redbubble.net/image.3708541048.9411/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Gim Bro web" />
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="red" />
+        <label>Contraseña</label>
+        <input type="password" />
+        <button type="submit" >Enviar</button>
       </form>
     </div>
   )
